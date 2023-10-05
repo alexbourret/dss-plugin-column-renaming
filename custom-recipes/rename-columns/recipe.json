@@ -1,0 +1,52 @@
+{
+    "meta": {
+        "label": "Rename columns",
+        "description": "Add a prefix and/or suffix to all columns names of a dataset",
+        "icon": "icon-columns"
+    },
+
+    "kind": "PYTHON",
+    "inputRoles": [
+        {
+            "name": "input_A_role",
+            "label": "input A displayed name",
+            "description": "what input A means",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+    "outputRoles": [
+        {
+            "name": "main_output",
+            "label": "main output displayed name",
+            "description": "what main output means",
+            "arity": "UNARY",
+            "required": false,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {
+            "name": "prefix",
+            "label": "Prefix",
+            "type": "STRING",
+            "description": ""
+        },
+        {
+            "name": "suffix",
+            "label": "Suffix",
+            "type": "STRING",
+            "description": ""
+        },
+        {
+            "name": "columns_black_list",
+            "label": "Excluding",
+            "description": "Columns that should not be modified",
+            "type": "COLUMNS",
+            "columnRole": "input_A_role"
+        }
+    ],
+    "resourceKeys": []
+}
